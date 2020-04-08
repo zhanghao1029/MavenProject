@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+	function test(){
+		alert("开始播放语音")
+		var mediaPlayer = top.document.getElementById("MediaPlayer");
+		mediaPlayer.URL = "../sound/comfiretransinfo_CN.mp3";
+		mediaPlayer.controls.stop();	
+		mediaPlayer.controls.play();
+	}
+</script>
+<body>
+	<div id = "vModule" style="height:0">
+		<object id="MediaPlayer" height=0 width=0 classid="clsid:6BF52A52-394A-11D3-B153-00C04F79FAA6">	
+			<param name="AutoStart" value="1"> 
+		</object>
+	</div>
+	
+	<bgsound src="../sound/comfiretransinfo_CN.mp3" >
+	
+	<input type="button" onclick = "test(); " value = "点击播放语音">
+	
+</body>
+</html>

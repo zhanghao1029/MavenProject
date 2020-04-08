@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>选择你喜欢的水果</title>
+</head>
+<script>
+var mainFrame = null;
+var selectFrult = new selectFrult;
+window.onload = function(){
+	mainFrame = document.getElementById("mainFrame");
+	
+}
+function selectFrult(url) {
+	
+	 this.apple = function(){
+		mainFrame.style.display ="";
+		mainFrame.setAttribute("src", "vue/testVue.html");
+	};
+	 this.bear = function(){
+		mainFrame.style.display ="";
+		mainFrame.setAttribute("src", "hiaward/testPlay.html");
+	};
+	this.durian = function(url){
+		mainFrame.style.display ="";
+		if(!url){
+			mainFrame.setAttribute("src", "error/wait.html");
+			return;
+		}
+		mainFrame.setAttribute("src", url);
+	}
+}
+</script>
+<body>
+<input type="button" value="语音"  onclick="selectFrult.bear()">
+<input type="button" value="苹果"  onclick="selectFrult.apple()">
+<input type="button" value="香蕉"  onclick="selectFrult.durian()">
+<iframe id="mainFrame" style="width: 100% ;height: 400px ;display: none;" ></iframe>
+</body>
+</html>
